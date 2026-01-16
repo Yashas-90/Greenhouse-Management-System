@@ -1,0 +1,49 @@
+LPC1768-Based Smart Greenhouse Management System
+----------------------------------------------
+
+1) Gas Sensor (MQ-135)
+   VCC  -> 5V
+   GND  -> Common Ground
+   AO   -> P0.24 (ADC)
+
+2) Temperature Sensor (LM35)
+   VCC  -> 3.3V
+   GND  -> Common Ground
+   OUT  -> P0.25 (ADC)
+
+3) LDR Sensor (Voltage Divider Output)
+   VCC  -> 3.3V
+   GND  -> Common Ground
+   Output -> P1.26 (ADC)
+
+4) Soil Moisture Sensor
+   VCC  -> 3.3V
+   GND  -> Common Ground
+   A0   -> P1.23 (ADC)
+
+5) LCD 16x2 (4-bit mode)
+   RS -> P0.10
+   EN -> P0.11
+   D4 -> P0.19
+   D5 -> P0.20
+   D6 -> P0.21
+   D7 -> P0.22
+   VCC -> 5V
+   GND -> Common Ground
+
+6) 12V Fan Control (Relay + BC547 Driver)
+   Base (BC547) -> P1.27 through 1K resistor
+   Emitter      -> Common Ground
+   Collector    -> Relay IN
+   Relay COM    -> 12V
+   Relay NO     -> Fan +ve
+   Fan -ve      -> Common Ground
+
+7) 5V Water Pump Control (Relay)
+   Relay IN  -> P1.28
+   Relay COM -> 5V
+   Relay NC  -> Pump +ve
+   Pump -ve  -> Common Ground
+
+8) Buzzer
+   Control -> P1.27 (if used separately, choose a different GPIO)
